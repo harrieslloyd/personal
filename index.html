@@ -6,8 +6,32 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-    Hello world
-    <script src="script.js"></script>
-  </body>
+    <body>
+      <h1>Picture of the day</h1>
+      <img src="/assets/placeholder" id="nasaImg" width="50%" height="50%">
+      <p id="explanation">Explanation Here</p>
+      <script>
+
+        function createNode(element) {
+          return document.createElement(element);
+        }
+
+        function append(parent, el) {
+          return parent.appendChild(el);
+        }
+
+        const url = 'https://api.nasa.gov/planetary/apod?api_key=A2PqnJVXsBkKFfUKUojEE1h6VaXpHlw2UKL8huIq';
+
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+          document.getElementById("nasaImg").src = data.url
+          document.getElementById("explanation").innerHTML = data.explanation
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+
+      </script>
+    </body>
 </html>
