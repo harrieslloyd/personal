@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
+
 body {
   text-align: center;
-  background-color: oldlace
+  background-color: white
+}
+
+button {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+  color: rgb(33, 92, 107);
+  border: 2px solid rgb(33, 92, 107);
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#img {
+  border-radius: 10px;
+}
+
+p {
+  font-family: 'Sora', sans-serif;
+}
+
+button:hover {
+  background-color: rgb(33, 92, 107);
+  color: white;
 }
