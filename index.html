@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Harries Lloyd</title>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/logotransparent.png"/>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
     <body>
@@ -12,18 +13,6 @@
       <img src="./assets/placeholder" id="img" width="50%" height="50%" alt="an image">
       <p id="text">--</p>
       <p>Taken From <a href="https://nasa.gov">nasa.gov</a> with a key obtained by Harries Lloyd</p>
-      <script>
-        const url = 'https://api.nasa.gov/planetary/apod?api_key=A2PqnJVXsBkKFfUKUojEE1h6VaXpHlw2UKL8huIq';
-
-        fetch(url)
-        .then((resp) => resp.json())
-        .then(function(data) {
-          document.getElementById("img").src = data.url
-          document.getElementById("text").innerHTML = data.explanation
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-      </script>
+      <script src="script.js"></script>
     </body>
 </html>
