@@ -19,6 +19,23 @@ window.transitionToPage = function(href) {
     }, 500)
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+let pages = [
+  'nasa.html',
+  'b2b10.html'
+]
+
+window.transitionToRandomPage = function() {
+    document.querySelector('body').style.opacity = 0
+    let href = pages[getRandomInt(pages.length)]
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+}
+
 document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('body').style.opacity = 1
 })

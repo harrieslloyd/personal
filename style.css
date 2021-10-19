@@ -87,6 +87,15 @@ body {
   animation: spin1 2s linear infinite;
 }
 
+#home {
+  color: #36b576;
+}
 
+#homeButton {
+  margin-top: 30px;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+}
 
 @keyframes spin1 { 100% { transform:rotate(360deg); } }
