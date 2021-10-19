@@ -8,11 +8,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
     <body>
-      <div class="container">
-        <div class="center">
-            <button class="button" style="vertical-align:middle" onclick="transitionToPage('random.html')"><span>I'm bored </span></button>
-        </div>
-      </div>
+      <button id="refresh" onclick="fetchUrl()">Refresh</button>
+      <br>
+      <img src="/assets/placeholder.png" id="img" width="50%" height="50%" alt="an image">
+      <p id="text">--</p>
+      <p>Taken From <a href="https://nasa.gov">nasa.gov</a> with a key obtained by Harries Lloyd</p>
       <script src="script.js"></script>
     </body>
 </html>
+
+
