@@ -7,31 +7,23 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
     <body>
+      
       <h1>Picture of the day</h1>
-      <img src="/assets/placeholder" id="nasaImg" width="50%" height="50%">
-      <p id="explanation">Explanation Here</p>
+      <img src="./assets/placeholder" id="img" width="50%" height="50%" alt="an image">
+      <p id="text">--</p>
+      <p>Taken From <a href="https://nasa.gov">nasa.gov</a> with a key obtained by Harries Lloyd</p>
       <script>
-
-        function createNode(element) {
-          return document.createElement(element);
-        }
-
-        function append(parent, el) {
-          return parent.appendChild(el);
-        }
-
         const url = 'https://api.nasa.gov/planetary/apod?api_key=A2PqnJVXsBkKFfUKUojEE1h6VaXpHlw2UKL8huIq';
 
         fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-          document.getElementById("nasaImg").src = data.url
-          document.getElementById("explanation").innerHTML = data.explanation
+          document.getElementById("img").src = data.url
+          document.getElementById("text").innerHTML = data.explanation
         })
         .catch(function(error) {
           console.log(error);
         });
-
       </script>
     </body>
 </html>
