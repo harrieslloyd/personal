@@ -14,8 +14,6 @@ p {
   margin: 30px;
 }
 
-
-
 .center {
   margin: 0;
   position: absolute;
@@ -37,6 +35,7 @@ p {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
+  font-family: 'Sora', sans-serif;
 }
 
 .button span {
