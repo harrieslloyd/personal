@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
     document.querySelector('body').style.opacity = 1
 })
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-
+async function clickRefresh() {
+  document.getElementById('text').innerHTML = "--"
+  document.getElementById('img').src = "/assets/placeholder.png"
+  await sleep(500)
+  fetchUrl()
+}
 
