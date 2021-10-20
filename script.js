@@ -26,8 +26,7 @@ function getLinkAndDownload() {
 function download(url) {
   const a = document.createElement('a')
   a.href = url
-  a.download = url.split('/').pop()
-  document.body.appendChild(a)
+  a.download = 'nasa'
   a.click()
   document.body.removeChild(a)
 }
@@ -43,24 +42,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function download(file, text) {
-  //creating an invisible element
-  var element = document.createElement('a');
-  element.setAttribute('href',
-    'data:text/plain;charset=utf-8, '
-    + encodeURIComponent(text));
-  element.setAttribute('download', file);
-
-  // Above code is equivalent to
-  // <a href="path of file" download="file name">
-
-  document.body.appendChild(element);
-
-  //onClick property
-  element.click();
-
-  document.body.removeChild(element);
-}
 
 
 
