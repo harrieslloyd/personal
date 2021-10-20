@@ -104,6 +104,7 @@ body {
 .nasaimg {
   width: 100%;
   position: relative;
+  margin: 50px;
 }
 
 .nasaimg img {
