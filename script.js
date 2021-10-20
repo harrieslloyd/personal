@@ -23,13 +23,6 @@ function getLinkAndDownload() {
     });
 }
 
-function download(url) {
-  const a = document.createElement('a')
-  a.href = url
-  a.download = 'nasa'
-  a.click()
-  document.body.removeChild(a)
-}
 
 window.transitionToPage = function (href) {
   document.querySelector('body').style.opacity = 0
@@ -42,6 +35,22 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+function download(url) {
+  //creating an invisible element
+  var element = document.createElement('a');
+  element.setAttribute('href', url);
+  element.setAttribute('download', 'nasaimg');
+
+  // Above code is equivalent to
+  // <a href="path of file" download="file name">
+
+  document.body.appendChild(element);
+
+  //onClick property
+  element.click();
+
+  document.body.removeChild(element);
+}
 
 
 
