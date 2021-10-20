@@ -3,8 +3,9 @@ function fetchUrl() {
   fetch(url)
   .then((resp) => resp.json())
   .then(function(data) {
-    document.getElementById("img").src = data.url
-    document.getElementById("text").innerHTML = data.explanation
+    document.getElementById("img").src = data.url;
+    document.getElementById("text").innerHTML = data.explanation;
+    document.getElementById("downloadbuttonlink").download = data.url;
   })
   .catch(function(error) {
     console.log(error);
@@ -25,8 +26,8 @@ function getRandomInt(max) {
 
 let pages = [
   'nasa.html',
-  'b2b10.html',
-  'snake.html'
+  //'b2b10.html',
+  //'snake.html'
 ]
 
 window.transitionToRandomPage = function() {

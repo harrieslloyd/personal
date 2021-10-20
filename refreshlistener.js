@@ -14,4 +14,3 @@ function func1()
    var item = document.getElementById("refreshIcon"); 
    item.classList.remove('animated')
 }
-
