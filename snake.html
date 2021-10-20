@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <script src="https://kit.fontawesome.com/e9a7752a7b.js" crossorigin="anonymous"></script>
+  <title>Harries Lloyd</title>
   <style>
   html, body {
     height: 100%;
@@ -9,18 +10,32 @@
   }
 
   body {
-    background: black;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   canvas {
-    border: 1px solid white;
+    border: 1px solid #36b576;
+  }
+
+  #home {
+  color: #36b576;
+  }
+
+  #homeButton {
+    margin-top: 30px;
+    position: relative;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
   }
   </style>
 </head>
 <body>
 <canvas width="400" height="400" id="game"></canvas>
+<br>
+<button id="homeButton" onclick="transitionToPage('index.html')"><i class="fas fa-home" id="home"></i></button>
 <script>
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
@@ -98,7 +113,7 @@ function loop() {
   context.fillRect(apple.x, apple.y, grid-1, grid-1);
 
   // draw snake one cell at a time
-  context.fillStyle = 'green';
+  context.fillStyle = '#36b576';
   snake.cells.forEach(function(cell, index) {
     
     // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
@@ -164,5 +179,7 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+
+<script src="script.js"></script>
 </body>
 </html>

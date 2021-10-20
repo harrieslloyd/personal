@@ -25,7 +25,8 @@ function getRandomInt(max) {
 
 let pages = [
   'nasa.html',
-  'b2b10.html'
+  'b2b10.html',
+  'snake.html'
 ]
 
 window.transitionToRandomPage = function() {
