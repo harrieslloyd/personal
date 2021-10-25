@@ -54,9 +54,6 @@ function download(url) {
 
 
 
-
-
-
 let pages = [
   'nasa.html',
   'b2b10.html',
