@@ -83,11 +83,3 @@ async function clickRefresh() {
   fetchUrl()
 }
 
-const icons = [
-  'fas fa-bacon',
-  "fas fa-atom"
-]
-
-function randIcon() {
-  document.getElementById('icons').classList.add(pages[getRandomInt(pages.length)])
-}
