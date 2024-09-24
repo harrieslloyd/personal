@@ -2,7 +2,8 @@
 
 body {
   text-align: center;
-  background-color: white
+  background-color: white;
+  font-family: 'Sora', sans-serif;
 }
 
 #img {
@@ -35,7 +36,6 @@ p {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  font-family: 'Sora', sans-serif;
 }
 
 .button span {
