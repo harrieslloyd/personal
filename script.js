@@ -56,8 +56,7 @@ function download(url) {
 
 let pages = [
   'nasa.html',
-  'b2b10.html',
-  'snake.html'
+  'b2b10.html'
 ]
 
 window.transitionToRandomPage = function () {
